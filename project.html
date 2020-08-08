@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset ="utf-8">
+<link rel="stylesheet" href="project.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Acme|Amatic+SC|Bangers|Cookie|Courgette|Damion|Great+Vibes|Handlee|Indie+Flower|Marck+Script|Pacifico|Permanent+Marker|Righteous|Rock+Salt|Satisfy|Shadows+Into+Light&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Acme|Aguafina+Script|Allerta+Stencil|Bangers|Cabin+Sketch|Caveat+Brush|Clicker+Script|Fredericka+the+Great|Frijole|Grand+Hotel|Leckerli+One|Luckiest+Guy|Nanum+Brush+Script|Rancho|Righteous|Special+Elite&display=swap" rel="stylesheet">
+<script src="anijs-min.js"></script>
+<script src="helpers/scrollreveal/anijs-helper-scrollreveal-min.js"></script>
+<link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
+<script src="bower_components/anijs/dist/anijs-min.js"></script>
+    <!-- ScrollReveal Helper -->
+    <script src="bower_components/anijs/dist/helpers/scrollreveal/anijs-helper-scrollreveal-min.js"></script>
+    <style>
+      .navbar{
+  width: 100%;
+  position:fixed;
+ 
+}
+.nav-item{
+  padding-left: 10px;
+  padding-right:10px;
+  
+ 
+}
+.dropdown-item{
+background-color: white !important;
+text-align: center;
+  color: black;
+}
+#home {
+    padding-left:550px;
+}
+.collapse {
+  
+text-align: center;
+  padding: 3px;
+  margin-right: 15px;
+}
+
+#me{
+  color:black;
+  font-weight:bold;
+  font-size: 18px;
+  padding-top: 10px;
+}
+.col-twelve,
+.col-full {
+    width: 100%;
+}
+.footer-bottom {
+    margin-top: 5.4rem;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-bottom .copyright span {
+    display: inline-block;
+}
+
+.footer-bottom .copyright span::after {
+    content: "|";
+    display: inline-block;
+    padding: 0 1rem 0 1.2rem;
+    color: rgba(255, 255, 255, 0.05);
+}
+
+.footer-bottom .copyright span:last-child::after {
+    display: none;
+}
+/* ------------------------------------------------------------------- 
+ * ## go to top
+ * ------------------------------------------------------------------- */
+.go-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 600;
+    display: none;
+}
+
+.go-top a, .go-top a:visited {
+    text-decoration: none;
+    border: 0 none;
+    display: block;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: black;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.go-top a i, .go-top a:visited i {
+    font-size: 18px;
+    line-height: inherit;
+}
+
+.go-top a:hover, .go-top a:focus {
+    color: #FFFFFF;
+}
+    </style>
+   
+</head>
+<body style=" background-color: #033670;">
+  <nav class="navbar fixed-top  navbar-expand-lg navbar-light " style="background:white;">
+    <a class="navbar-brand" href="#">
+<img src="logo.png" style="width:50%; height:300%;margin-top:-25px;" alt="">
+</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+      <ul class="navbar-nav ml-auto">
+        <li id="home" class="nav-item" ><a href="index.html" class="nav-link" id="me">Home</a></li>
+        <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Events
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#eve">Noesis</a>
+              <a class="dropdown-item" href="#eve">Technosearch</a>
+              <a class="dropdown-item" href="#eve">Workshops</a>
+            </div>
+          </li> -->
+        
+      <li class="nav-item"><a href="event.php" class="nav-link" id="me">Events</a></li>
+          <li class="nav-item"><a href="project.html" class="nav-link" id="me">Project</a></li>
+          <li class="nav-item"><a href="gallery.php" class="nav-link" id="me">Gallery</a></li>
+          <li class="nav-item dropdown" >
+            <a id="me" class="nav-link dropdown-toggle" href="nitb.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Chapters
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" style="color:black;" href="nitb.html">NIT-B</a>
+              <a class="dropdown-item"  style="color:black;" href="#eve">IHM-B</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="team.php" class="nav-link" id="me">Team</a></li>
+          <li class="nav-item"><a href="joinus.php" class="nav-link" id="me">Join</a></li>
+         
+          <li class="nav-item">
+              <button type="button" class="btn btn-primary btn-rounded">
+                 <a href="Txntest.php" style="text-decoration:none;color:white;"> DONATE</a>
+              </button>
+          </li>
+      </ul>
+    </div>
+  </nav>
+
+<div class ="container">
+  <div class="row" id="item" data-anijs="if: scroll, on: window, do: swing animated, before: scrollReveal">
+    <!--image-->
+<div class="col-sm-12">
+<!--ghost text-->
+<section id="akshar">
+<p id="ghost">
+<span>A</span>
+<span>K</span>
+<span>S</span>
+<span>H</span>
+<span>A</span>
+<span>R</span>
+
+</p>
+</section>
+<!--ghost text ends-->
+  <hr>
+  <div class="box">
+<div class="imagebox" data-anijs="if: scroll, on: window, do: swing animated, before: scrollReveal">
+<img src="pic.jpg">
+</div>
+<div class ="details">
+  <div class="content">
+<p style="font-size:2vw;">Project Akshar aims to educate underpriviledged children at different centres and impart them with elementary knowledge before they acquire enough competence to be endorsed for the next project, project Paathshala.
+
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<!--text-->
+
+<div class="col-sm-12">
+  <!--ghost text-->
+  <section id="akshar">
+  <p id="ghost">
+  <span>P</span>
+  <span>A</span>
+  <span>A</span>
+  <span>T</span>
+  <span>H</span>
+  <span>S</span>
+  <span>H</span>
+  <span>A</span>
+  <span>L</span>
+  <span>A</span>
+
+  </p>
+  </section>
+  <!--ghost text ends-->
+  <hr>
+  <div class="box">
+<div class="imagebox">
+<img src="news.jpg" width="100px;" height="50px;" >
+</div>
+<div class ="details">
+  <div class="content">
+<p style="font-size:2vw;">Works to enable meritorious students of Project Akshar by admitting them to decent private institutions and funding the rest of their studies.
+    This project has already benefited FIFTEEN brilliant slum children and is looking forward for more .
+
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<!--text-->
+<div class="col-sm-12">
+  <!--ghost text-->
+  <section id="akshar">
+  <p id="ghost">
+  <span>A</span>
+  <span>A</span>
+  <span>K</span>
+  <span>A</span>
+  <span>R</span>
+
+  </p>
+  </section>
+  <!--ghost text ends-->
+
+  <hr>
+  <div class="box">
+<div class="imagebox">
+<img src="Picture6.jpg" width="100px;" height="50px;" >
+</div>
+<div class ="details">
+  <div class="content">
+<p style="font-size:2vw;">Project Aakar is consigned for overall development of poor children from the slums.
+  Procure them with finese in specific interests other than from academic outlook. Various activities and workshops are conducted on weekly basis for the same.
+
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<!--col4-->
+<div class="col-sm-12">
+<!--ghost text-->
+<!--ghost text-->
+<section id="akshar">
+<p id="ghost">
+<span>A</span>
+<span>A</span>
+<span>N</span>
+<span>A</span>
+<span>N</span>
+<span>d</span>
+
+</p>
+</section>
+<!--ghost text ends-->
+
+  <hr>
+  <div class="box">
+<div class="imagebox">
+<img src="download.jpg" width="100px;" height="50px;" >
+</div>
+<div class ="details">
+  <div class="content">
+<p style="font-size:2vw;">Under Aanand , educational and fun trips are organized occasionally to keep them captivated throughout the learning process.
+  There are events, coordinated to provide them with a platform to enhance and showcase their flair in outside activities as well .
+
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<!--col5-->
+<div class="col-sm-12">
+<!--ghost text-->
+<!--ghost text-->
+<section id="akshar">
+<p id="ghost">
+<span>P</span>
+<span>R</span>
+<span>A</span>
+<span>D</span>
+<span>A</span>
+<span>A</span>
+<span>N</span>
+
+</p>
+</section>
+<!--ghost text ends-->
+
+  <hr>
+  <div class="box">
+<div class="imagebox">
+<img src="_DSC0028.JPG" width="100px;" height="50px;" >
+</div>
+<div class ="details">
+  <div class="content">
+<p style="font-size:2vw;">Under project PRADAAN we provide stationary items including books, notebooks, pens etc. and also provide  school uniforms to the students in private schools through the project paathshala .
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+</div>
+<footer class="footer-distributed">
+  <div class="footer-left">
+    <h3>Aa<span>ro</span>ha</h3>
+
+    <p class="footer-links">
+      <a href="#">Home</a>
+      ·
+      <a href="#">About Us</a>
+      ·
+      <a href="#">Blog</a>
+      ·
+      <a href="#">Events</a>
+      ·
+      <a href="#">Projects</a>
+      ·
+      <a href="#">Contact</a>
+    </p>
+
+    <p class="footer-company-name">&copy; 2020</p>
+  </div>
+
+  <div class="footer-center">
+    <!-- <div>
+      <i class="fa fa-map-marker"></i>
+      <p>
+        <span>Anna Nagar slums,Rachna Nagar,Bhopal</span> Madhya Pradesh,
+        India
+      </p>
+    </div> -->
+
+    <div>
+      <i class="fa fa-phone"></i>
+      <p>+91 75663 09722</p>
+    </div>
+
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p>
+        <a href="#" style="color: #2C8AF6;">aaroha.youthorg@gmail.com</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-right">
+    <p class="footer-company-about">
+      <span>About Us</span>
+      Aaroha is a youth organization which works for the upliftment of the
+      underprivileged children.
+    </p>
+
+    <div class="footer-icons">
+      <a href="https://www.facebook.com/aaroha.youthorg/">
+        <img src="https://img.icons8.com/nolan/40/facebook-new.png"
+      /></a>
+      <a href="#"
+        ><img src="https://img.icons8.com/nolan/40/twitter.png"
+      /></a>
+      <a href="https://www.facebook.com/aaroha.youthorg/"
+        ><img src="https://img.icons8.com/nolan/40/instagram-new.png"
+      /></a>
+    </div>
+  </div>
+  <div class="row footer-bottom">
+      
+    <div class="col-twelve">
+      <div class="copyright">
+        <span>© Copyright Aaroha 2020</span>
+        <span>Crafted with ❤ by <a href="https://www.linkedin.com/mwlite/in/aditi-khandelwal-799480172">Aditi Khandelwal, </a><a
+            href="https://www.linkedin.com/in/neha-parmar-242a89175/">Neha Parmar</a> and <a
+            href="https://www.linkedin.com/mwlite/in/prakriti-shrivastava-b55172199">Prakriti Shrivastava</a></span>
+      </div>
+  
+      <div class="go-top">
+        <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  
+  </div>
+</footer>
+ <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>     
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="bower_components/anijs/dist/anijs-min.js"></script>
+    <!-- ScrollReveal Helper -->
+    <script src="bower_components/anijs/dist/helpers/scrollreveal/anijs-helper-scrollreveal-min.js"></script>
+
+</html>
